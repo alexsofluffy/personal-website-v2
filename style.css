@@ -93,10 +93,10 @@ body {
     text-align: center;
 }
 
-#intro h1 {
-    font-size: 40px;
+.row {
+    border: red 5px solid;
 }
 
-p {
-    font-family: 'Lato', sans-serif;
+.col {
+    border: blue 5px solid;
 }
