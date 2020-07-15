@@ -1,4 +1,19 @@
-//Navbar fade in and out
+//Navbar fades in on page load
+if (location.href.split("/").slice(-1) == "index.html") {
+    var opac = 0;
+    
+    function fadeInNav() {
+        if (opac < 1) {
+            document.getElementById("navbar").style.opacity = opac;
+            opac += 0.01;
+            setInterval(fadeInNav, 10);
+            clearInterval(fadeInNav);
+        }
+    }
+    setTimeout(fadeInNav, 1000);
+}
+
+//Navbar fades in when scrolling up and out when scrolling down
 var oldScrollPos = window.pageYOffset;
 window.onscroll = function() {
     currScrollPos = window.pageYOffset;
